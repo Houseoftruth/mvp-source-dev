@@ -23,6 +23,8 @@ org: shinedesign
 provider:
   name: aws
   runtime: nodejs12.x
+  stage: development
+  region: eu-central-1
 
 # you can overwrite defaults here
 #  stage: dev
