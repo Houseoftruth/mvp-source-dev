@@ -15,6 +15,10 @@ service: lamb
 # app and org for use with dashboard.serverless.com
 plugins:
   - serverless-apigw-binary
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
 
 app: lamb
 org: shinedesign
@@ -25,7 +29,7 @@ org: shinedesign
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -35,6 +39,7 @@ provider:
   timeout: 10
   stage: production
   region: eu-central-1
+  cfnRole: arn:aws:iam::077829515820:role/cfnRole
 
 # you can overwrite defaults here
 #  stage: dev

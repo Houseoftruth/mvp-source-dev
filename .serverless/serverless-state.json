@@ -5,11 +5,23 @@
       "name": "lamb"
     },
     "provider": {
-      "stage": "dev",
+      "stage": "production",
       "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*?]+?)}",
       "name": "aws",
       "runtime": "nodejs12.x",
-      "region": "us-east-1",
+      "iamRoleStatements": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "events:PutEvents"
+          ],
+          "Resource": "*"
+        }
+      ],
+      "memorySize": 192,
+      "timeout": 10,
+      "region": "eu-central-1",
+      "cfnRole": "arn:aws:iam::077829515820:role/cfnRole",
       "versionFunctions": true,
       "remoteFunctionData": null,
       "compiledCloudFormationTemplate": {
@@ -73,7 +85,7 @@
           "HelloLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/lamb-dev-hello"
+              "LogGroupName": "/aws/lambda/lamb-production-hello"
             }
           },
           "IamRoleLambdaExecution": {
@@ -101,7 +113,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "dev",
+                        "production",
                         "lamb",
                         "lambda"
                       ]
@@ -118,7 +130,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/lamb-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/lamb-production*:*"
                           }
                         ]
                       },
@@ -129,9 +141,12 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/lamb-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/lamb-production*:*:*"
                           }
                         ]
+                      },
+                      {
+                        "$ref": "$[\"service\"][\"provider\"][\"iamRoleStatements\"][0]"
                       }
                     ]
                   }
@@ -143,7 +158,7 @@
                   "-",
                   [
                     "lamb",
-                    "dev",
+                    "production",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -206,11 +221,11 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/dev/1581023322063-2020-02-06T21:08:42.063Z/lamb.zip"
+                "S3Key": "serverless/lamb/production/1581030186171-2020-02-06T23:03:06.171Z/lamb.zip"
               },
-              "FunctionName": "lamb-dev-hello",
+              "FunctionName": "lamb-production-hello",
               "Handler": "s_hello.handler",
-              "MemorySize": 1024,
+              "MemorySize": 192,
               "Role": {
                 "Fn::GetAtt": [
                   "IamRoleLambdaExecution",
@@ -218,27 +233,27 @@
                 ]
               },
               "Runtime": "nodejs12.x",
-              "Timeout": 6
+              "Timeout": 10
             },
             "DependsOn": [
               "HelloLogGroup",
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionHYzRO0WS44AScjATd7uI974YQ7kQYH7airrFWLppg": {
+          "HelloLambdaVersionouujXaklf8TOSwdd9ZHf6EDvheS1VjNk85LgTvZK9U": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "ioXxW2A6r5mm8pMMrHQvsy9IVdzrpYTbUOYC7k7JBLE="
+              "CodeSha256": "+fqPe7CrnmZvQP6i4mO6KjOwk3l/v3ziWKSwl4VTgIo="
             }
           },
           "CloudWatchLogsSubscriptionFilterHelloLogGroup": {
             "Type": "AWS::Logs::SubscriptionFilter",
             "Properties": {
-              "DestinationArn": "arn:aws:logs:us-east-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#dev",
+              "DestinationArn": "arn:aws:logs:eu-central-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#production",
               "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
               "LogGroupName": {
                 "Ref": "HelloLogGroup"
@@ -263,7 +278,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionHYzRO0WS44AScjATd7uI974YQ7kQYH7airrFWLppg"
+              "Ref": "HelloLambdaVersionouujXaklf8TOSwdd9ZHf6EDvheS1VjNk85LgTvZK9U"
             }
           }
         }
@@ -342,18 +357,28 @@
       },
       "vpc": {}
     },
+    "custom": {
+      "apigwBinary": {
+        "types": [
+          "*/*"
+        ]
+      }
+    },
+    "plugins": [
+      "serverless-apigw-binary"
+    ],
     "pluginsData": {},
     "functions": {
       "hello": {
         "handler": "s_hello.handler",
         "events": [],
-        "name": "lamb-dev-hello",
+        "name": "lamb-production-hello",
         "package": {},
-        "memory": 1024,
-        "timeout": 6,
+        "memory": 192,
+        "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersionHYzRO0WS44AScjATd7uI974YQ7kQYH7airrFWLppg"
+        "versionLogicalId": "HelloLambdaVersionouujXaklf8TOSwdd9ZHf6EDvheS1VjNk85LgTvZK9U"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -367,7 +392,7 @@
     "artifact": "C:\\Users\\Jonny Deep\\SAKO\\MVP\\MVP-SRC\\lamb\\.serverless\\lamb.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/lamb/dev/1581023322063-2020-02-06T21:08:42.063Z",
+    "artifactDirectoryName": "serverless/lamb/production/1581030186171-2020-02-06T23:03:06.171Z",
     "artifact": "lamb.zip"
   }
 }
