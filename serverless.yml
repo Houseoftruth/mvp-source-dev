@@ -15,7 +15,7 @@ service: lamb
 # app and org for use with dashboard.serverless.com
 plugins:
   - serverless-apigw-binary
-  
+
 app: lamb
 org: shinedesign
 
@@ -25,7 +25,7 @@ org: shinedesign
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs10.x
   iamRoleStatements:
     - Effect: "Allow"
       Action:
