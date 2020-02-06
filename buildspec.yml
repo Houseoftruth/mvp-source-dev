@@ -9,7 +9,9 @@ phases:
       - npm install serverless --global
       - npm install -g serverless-fix-apigw-int
 
-
+      - export ${SERVERLESS_ACCESS_KEY} 
+      - export ${AWS_ACCESS_KEY_ID} 
+      - export ${AWS_SECRET_ACCESS_KEY}
     
   build:
     commands:
