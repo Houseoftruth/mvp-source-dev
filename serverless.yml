@@ -15,6 +15,7 @@ service: lamb
 # app and org for use with dashboard.serverless.com
 plugins:
   - serverless-apigw-binary
+  
 app: lamb
 org: shinedesign
 

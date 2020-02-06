@@ -7,7 +7,7 @@ phases:
       - npm install
       - npm install -g @angular/cli
       - npm install serverless --global
-      - npm install -g serverless-fix-apigw-int
+      - npm install -g serverless-apigw-binary
 
       - export ${SERVERLESS_ACCESS_KEY} 
       - export ${AWS_ACCESS_KEY_ID} 
