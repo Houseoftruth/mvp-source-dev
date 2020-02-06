@@ -199,7 +199,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/production/1581031189187-2020-02-06T23:19:49.187Z/lamb.zip"
+          "S3Key": "serverless/lamb/production/1581032343741-2020-02-06T23:39:03.741Z/lamb.zip"
         },
         "FunctionName": "lamb-production-hello",
         "Handler": "s_hello.handler",
@@ -210,7 +210,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs10.x",
+        "Runtime": "nodejs12.x",
         "Timeout": 10
       },
       "DependsOn": [
@@ -218,14 +218,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersionhgZtfHzDf9ckyYEzpSECL9TopqbY6xtsjPLSbfTEjeg": {
+    "HelloLambdaVersionnP3e4T1lONydMreR5MO3Wl62aZ4st0vPGRzQOTTQlA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "uIMF6ejt5tvYhL9vEiUOGYKLZMKmPz1HfNylFBygZ6k="
+        "CodeSha256": "k5Bkl7OISJvlSpiD6XJJX0EZ7uXBR/+vONbssHU+r4Y="
       }
     },
     "CloudWatchLogsSubscriptionFilterHelloLogGroup": {
@@ -256,7 +256,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionhgZtfHzDf9ckyYEzpSECL9TopqbY6xtsjPLSbfTEjeg"
+        "Ref": "HelloLambdaVersionnP3e4T1lONydMreR5MO3Wl62aZ4st0vPGRzQOTTQlA"
       }
     }
   }

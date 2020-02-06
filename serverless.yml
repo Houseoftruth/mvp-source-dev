@@ -28,7 +28,7 @@ org: shinedesign
 # frameworkVersion: "=X.X.X"
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   iamRoleStatements:
     - Effect: "Allow"
       Action:
