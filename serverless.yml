@@ -22,7 +22,7 @@ org: shinedesign
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"
 
-rovider:
+provider:
   name: aws
   runtime: nodejs12.x
   iamRoleStatements:
