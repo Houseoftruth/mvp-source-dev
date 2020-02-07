@@ -48,7 +48,7 @@ exports.addMessageToLogAdmin = async (event, context, callback)=> {
     TableName: "mvp-chatlog",
     Item: {
       date: Date.now(),
-      message: "Excuse me, but may i have some more butter, please?"
+      message: "Richard isn't going to be in today, just to let you know..."
     }
   }
   
@@ -72,7 +72,7 @@ exports.addMessageToLogKitchen = async (event, context, callback)=> {
     TableName: "mvp-chatlog",
     Item: {
       date: Date.now(),
-      message: "Excuse me, but may i have some more butter, please?"
+      message: "Coming right up! :)"
     }
   }
   
