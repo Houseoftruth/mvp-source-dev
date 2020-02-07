@@ -124,7 +124,7 @@ exports.createClient = async (event, context, callback) => {
       contact: "Richard Dawkins",
       restaurantname: "Brilliant Burritos",
       notables: 15
-      
+
     }
   }
 
@@ -136,31 +136,33 @@ exports.createClient = async (event, context, callback) => {
     console.log(err);
   }
 
-  console.log("BEFORE DOCLIENT")
-
 
 };
 
 exports.saveFileToS3 = async (event, context, callback) => {
-  var s3 = new AWS.S3();
-      var folder = "QR"
-      var filename = "Qr#1"
-      var bucketName = 'mvp-qrcodes'
-      var keyName = getKeyName(folder, filename);
-      var content = 'I Am Not Qr';
-  
-      var params = { Bucket: bucketName, Key: keyName, Body: content };
-  
-      s3.putObject(params, function (err, data) {
-          if (err)
-              console.log(err)
-          else
-              console.log("Successfully saved object to " + bucketName + "/" + keyName);
-      });
 
-  
+
+  var s3 = new AWS.S3({ region: "eu-central-1", apiVersion: '2006-03-01' });
+  var folder = "QR"
+  var filename = "Qr#1"
+  var bucketName = 'mvp-qr'
+  var keyName = getKeyName(folder, filename);
+  var content = 'I Am Not Qr';
+  var params = { Bucket: bucketName, Key: keyName, Body: content };
+
+  try {
+
+    var res = await s3.putObject(params, function (err, data) {}).promise();
+    console.log('complete:', res);
+
+  } catch (err) {
+
+    console.log('error:', err);
+
+  }
+
   function getKeyName(folder, filename) {
-      return folder + '/' + filename;
+    return folder + '/' + filename;
   }
 
 };
