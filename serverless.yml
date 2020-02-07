@@ -28,16 +28,11 @@ org: shinedesign
 provider:
   name: aws
   runtime: nodejs12.x
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - "events:PutEvents"
-      Resource: "*"
+
   memorySize: 192
   timeout: 10
-  stage: production
+  stage: prod
   region: eu-central-1
-  cfnRole: arn:aws:iam::077829515820:role/cfnRole
 
 # you can overwrite defaults here
 #  stage: dev
