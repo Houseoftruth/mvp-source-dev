@@ -83,6 +83,25 @@ functions:
     handler: handler.addMessageToLogCustomer
   createtable:
     handler: handler.createTable
+
+ events:
+
+      - http:
+          path: hello
+          method: get
+      - http:
+          path: addmessagetologadmin
+          method: get
+      - http:
+          path: addmessagetologcustomer
+          method: get
+      - http:
+          path: addmessagetologkitchen
+          method: get
+      - http:
+          path: createtable
+          method: get
+
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
