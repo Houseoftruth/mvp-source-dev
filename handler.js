@@ -19,7 +19,7 @@ exports.hello = async (event, context, callback)=> {
   const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
 
   const params = {
-    TableName: "mvp-db",
+    TableName: "mvp-chatlog",
     Item: {
       date: Date.now(),
       message: "Bob"
