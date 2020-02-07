@@ -10,7 +10,6 @@ var pusher = new Pusher({
   encrypted: true
 });
 
-
 AWS.config.update({ region: "eu-central-1" });
 
 
@@ -39,7 +38,6 @@ exports.hello = async (event, context, callback) => {
 
 };
 
-
 exports.addMessageToLogAdmin = async (event, context, callback) => {
 
   const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
@@ -64,6 +62,7 @@ exports.addMessageToLogAdmin = async (event, context, callback) => {
 
 
 };
+
 exports.addMessageToLogKitchen = async (event, context, callback) => {
 
   const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
@@ -88,6 +87,7 @@ exports.addMessageToLogKitchen = async (event, context, callback) => {
 
 
 };
+
 exports.addMessageToLogCustomer = async (event, context, callback) => {
 
   const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
@@ -138,6 +138,29 @@ exports.createClient = async (event, context, callback) => {
 
   console.log("BEFORE DOCLIENT")
 
+
+};
+
+exports.saveFileToS3 = async (event, context, callback) => {
+  var s3 = new AWS.S3();
+
+      var bucketName = 'mvp-qrcodes'
+      var keyName = getKeyName(folder, filename);
+      var content = 'This is a sample text file';
+  
+      var params = { Bucket: bucketName, Key: keyName, Body: content };
+  
+      s3.putObject(params, function (err, data) {
+          if (err)
+              console.log(err)
+          else
+              console.log("Successfully saved object to " + bucketName + "/" + keyName);
+      });
+
+  
+  function getKeyName(folder, filename) {
+      return folder + '/' + filename;
+  }
 
 };
 

@@ -81,6 +81,8 @@ functions:
     handler: handler.createTable
   createuser:
     handler: handler.createClient
+  storeqr:
+    handler: handler.saveFileToS3
 
 events:
 
@@ -101,6 +103,9 @@ events:
       method: get
   - http:
       path: createclient
+      method: get
+  - http:
+      path: storeqr
       method: get
 
 #    The following are a few example events you can configure
