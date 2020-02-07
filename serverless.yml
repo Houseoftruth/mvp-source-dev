@@ -78,6 +78,8 @@ functions:
     handler: handler.addMessageToLogCustomer
   createtable:
     handler: handler.createTable
+  createuser:
+    handler: handler.createUser
 
 events:
 
@@ -95,6 +97,9 @@ events:
       method: get
   - http:
       path: createtable
+      method: get
+  - http:
+      path: createuser
       method: get
 
 #    The following are a few example events you can configure
