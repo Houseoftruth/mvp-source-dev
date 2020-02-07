@@ -88,6 +88,30 @@
               "LogGroupName": "/aws/lambda/lamb-production-hello"
             }
           },
+          "AddmessagetologadminLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/lamb-production-addmessagetologadmin"
+            }
+          },
+          "AddmessagetologkitchenLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/lamb-production-addmessagetologkitchen"
+            }
+          },
+          "AddmessagetologcustomerLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/lamb-production-addmessagetologcustomer"
+            }
+          },
+          "CreatetableLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/lamb-production-createtable"
+            }
+          },
           "IamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
@@ -205,6 +229,30 @@
                               "HelloLogGroup",
                               "Arn"
                             ]
+                          },
+                          {
+                            "Fn::GetAtt": [
+                              "AddmessagetologadminLogGroup",
+                              "Arn"
+                            ]
+                          },
+                          {
+                            "Fn::GetAtt": [
+                              "AddmessagetologkitchenLogGroup",
+                              "Arn"
+                            ]
+                          },
+                          {
+                            "Fn::GetAtt": [
+                              "AddmessagetologcustomerLogGroup",
+                              "Arn"
+                            ]
+                          },
+                          {
+                            "Fn::GetAtt": [
+                              "CreatetableLogGroup",
+                              "Arn"
+                            ]
                           }
                         ]
                       }
@@ -221,7 +269,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/production/1581032343741-2020-02-06T23:39:03.741Z/lamb.zip"
+                "S3Key": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z/lamb.zip"
               },
               "FunctionName": "lamb-production-hello",
               "Handler": "s_hello.handler",
@@ -240,14 +288,158 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionnP3e4T1lONydMreR5MO3Wl62aZ4st0vPGRzQOTTQlA": {
+          "HelloLambdaVersionV3YQa2x3BXZzL2JBksykVHIyNFNh0ZjIHC4XP27XHE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "k5Bkl7OISJvlSpiD6XJJX0EZ7uXBR/+vONbssHU+r4Y="
+              "CodeSha256": "kqBaXUpuUir3IK/9UwOoYfQhH93B5HMpFA/HfV3OAUE="
+            }
+          },
+          "AddmessagetologadminLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z/lamb.zip"
+              },
+              "FunctionName": "lamb-production-addmessagetologadmin",
+              "Handler": "s_addmessagetologadmin.handler",
+              "MemorySize": 192,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs12.x",
+              "Timeout": 10
+            },
+            "DependsOn": [
+              "AddmessagetologadminLogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AddmessagetologadminLambdaVersion5YwocAz0oHiYPWb29IxN9CxZUrBtKsy2eJEPNE54Kuk": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "AddmessagetologadminLambdaFunction"
+              },
+              "CodeSha256": "kqBaXUpuUir3IK/9UwOoYfQhH93B5HMpFA/HfV3OAUE="
+            }
+          },
+          "AddmessagetologkitchenLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z/lamb.zip"
+              },
+              "FunctionName": "lamb-production-addmessagetologkitchen",
+              "Handler": "s_addmessagetologkitchen.handler",
+              "MemorySize": 192,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs12.x",
+              "Timeout": 10
+            },
+            "DependsOn": [
+              "AddmessagetologkitchenLogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AddmessagetologkitchenLambdaVersionQGJEu8xTjblhCKwcwysOIdIJTJXdEPve5aYukaceI": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "AddmessagetologkitchenLambdaFunction"
+              },
+              "CodeSha256": "kqBaXUpuUir3IK/9UwOoYfQhH93B5HMpFA/HfV3OAUE="
+            }
+          },
+          "AddmessagetologcustomerLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z/lamb.zip"
+              },
+              "FunctionName": "lamb-production-addmessagetologcustomer",
+              "Handler": "s_addmessagetologcustomer.handler",
+              "MemorySize": 192,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs12.x",
+              "Timeout": 10
+            },
+            "DependsOn": [
+              "AddmessagetologcustomerLogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "AddmessagetologcustomerLambdaVersion1NLDer7dJejrO8WJXwVtoiIbP7WlD3hlSABlh8tr9Og": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "AddmessagetologcustomerLambdaFunction"
+              },
+              "CodeSha256": "kqBaXUpuUir3IK/9UwOoYfQhH93B5HMpFA/HfV3OAUE="
+            }
+          },
+          "CreatetableLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z/lamb.zip"
+              },
+              "FunctionName": "lamb-production-createtable",
+              "Handler": "s_createtable.handler",
+              "MemorySize": 192,
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              },
+              "Runtime": "nodejs12.x",
+              "Timeout": 10
+            },
+            "DependsOn": [
+              "CreatetableLogGroup",
+              "IamRoleLambdaExecution"
+            ]
+          },
+          "CreatetableLambdaVersion7ez2h4XDpeqMg59CLr7R6lGkZr7xPOdEQ2mB0PTNui8": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "CreatetableLambdaFunction"
+              },
+              "CodeSha256": "kqBaXUpuUir3IK/9UwOoYfQhH93B5HMpFA/HfV3OAUE="
             }
           },
           "CloudWatchLogsSubscriptionFilterHelloLogGroup": {
@@ -257,6 +449,46 @@
               "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
               "LogGroupName": {
                 "Ref": "HelloLogGroup"
+              }
+            }
+          },
+          "CloudWatchLogsSubscriptionFilterAddmessagetologadminLogGroup": {
+            "Type": "AWS::Logs::SubscriptionFilter",
+            "Properties": {
+              "DestinationArn": "arn:aws:logs:eu-central-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#production",
+              "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
+              "LogGroupName": {
+                "Ref": "AddmessagetologadminLogGroup"
+              }
+            }
+          },
+          "CloudWatchLogsSubscriptionFilterAddmessagetologkitchenLogGroup": {
+            "Type": "AWS::Logs::SubscriptionFilter",
+            "Properties": {
+              "DestinationArn": "arn:aws:logs:eu-central-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#production",
+              "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
+              "LogGroupName": {
+                "Ref": "AddmessagetologkitchenLogGroup"
+              }
+            }
+          },
+          "CloudWatchLogsSubscriptionFilterAddmessagetologcustomerLogGroup": {
+            "Type": "AWS::Logs::SubscriptionFilter",
+            "Properties": {
+              "DestinationArn": "arn:aws:logs:eu-central-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#production",
+              "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
+              "LogGroupName": {
+                "Ref": "AddmessagetologcustomerLogGroup"
+              }
+            }
+          },
+          "CloudWatchLogsSubscriptionFilterCreatetableLogGroup": {
+            "Type": "AWS::Logs::SubscriptionFilter",
+            "Properties": {
+              "DestinationArn": "arn:aws:logs:eu-central-1:802587217904:destination:kRgjJDrLtqvhG5vtGM#WNp8FMV7rdSsyk5lxl#lamb#production",
+              "FilterPattern": "?\"REPORT RequestId: \" ?\"SERVERLESS_ENTERPRISE\"",
+              "LogGroupName": {
+                "Ref": "CreatetableLogGroup"
               }
             }
           }
@@ -278,7 +510,31 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionnP3e4T1lONydMreR5MO3Wl62aZ4st0vPGRzQOTTQlA"
+              "Ref": "HelloLambdaVersionV3YQa2x3BXZzL2JBksykVHIyNFNh0ZjIHC4XP27XHE"
+            }
+          },
+          "AddmessagetologadminLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "AddmessagetologadminLambdaVersion5YwocAz0oHiYPWb29IxN9CxZUrBtKsy2eJEPNE54Kuk"
+            }
+          },
+          "AddmessagetologkitchenLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "AddmessagetologkitchenLambdaVersionQGJEu8xTjblhCKwcwysOIdIJTJXdEPve5aYukaceI"
+            }
+          },
+          "AddmessagetologcustomerLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "AddmessagetologcustomerLambdaVersion1NLDer7dJejrO8WJXwVtoiIbP7WlD3hlSABlh8tr9Og"
+            }
+          },
+          "CreatetableLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "CreatetableLambdaVersion7ez2h4XDpeqMg59CLr7R6lGkZr7xPOdEQ2mB0PTNui8"
             }
           }
         }
@@ -364,9 +620,6 @@
         ]
       }
     },
-    "plugins": [
-      "serverless-apigw-binary"
-    ],
     "pluginsData": {},
     "functions": {
       "hello": {
@@ -378,7 +631,51 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersionnP3e4T1lONydMreR5MO3Wl62aZ4st0vPGRzQOTTQlA"
+        "versionLogicalId": "HelloLambdaVersionV3YQa2x3BXZzL2JBksykVHIyNFNh0ZjIHC4XP27XHE"
+      },
+      "addmessagetologadmin": {
+        "handler": "s_addmessagetologadmin.handler",
+        "events": [],
+        "name": "lamb-production-addmessagetologadmin",
+        "package": {},
+        "memory": 192,
+        "timeout": 10,
+        "runtime": "nodejs12.x",
+        "vpc": {},
+        "versionLogicalId": "AddmessagetologadminLambdaVersion5YwocAz0oHiYPWb29IxN9CxZUrBtKsy2eJEPNE54Kuk"
+      },
+      "addmessagetologkitchen": {
+        "handler": "s_addmessagetologkitchen.handler",
+        "events": [],
+        "name": "lamb-production-addmessagetologkitchen",
+        "package": {},
+        "memory": 192,
+        "timeout": 10,
+        "runtime": "nodejs12.x",
+        "vpc": {},
+        "versionLogicalId": "AddmessagetologkitchenLambdaVersionQGJEu8xTjblhCKwcwysOIdIJTJXdEPve5aYukaceI"
+      },
+      "addmessagetologcustomer": {
+        "handler": "s_addmessagetologcustomer.handler",
+        "events": [],
+        "name": "lamb-production-addmessagetologcustomer",
+        "package": {},
+        "memory": 192,
+        "timeout": 10,
+        "runtime": "nodejs12.x",
+        "vpc": {},
+        "versionLogicalId": "AddmessagetologcustomerLambdaVersion1NLDer7dJejrO8WJXwVtoiIbP7WlD3hlSABlh8tr9Og"
+      },
+      "createtable": {
+        "handler": "s_createtable.handler",
+        "events": [],
+        "name": "lamb-production-createtable",
+        "package": {},
+        "memory": 192,
+        "timeout": 10,
+        "runtime": "nodejs12.x",
+        "vpc": {},
+        "versionLogicalId": "CreatetableLambdaVersion7ez2h4XDpeqMg59CLr7R6lGkZr7xPOdEQ2mB0PTNui8"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -392,7 +689,7 @@
     "artifact": "C:\\Users\\Jonny Deep\\SAKO\\MVP\\MVP-SRC\\lamb\\.serverless\\lamb.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/lamb/production/1581032343741-2020-02-06T23:39:03.741Z",
+    "artifactDirectoryName": "serverless/lamb/production/1581034700274-2020-02-07T00:18:20.274Z",
     "artifact": "lamb.zip"
   }
 }

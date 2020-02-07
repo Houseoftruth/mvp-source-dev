@@ -113,6 +113,7 @@ console.log("BEFORE DOCLIENT")
 
 };
 
+
 exports.creatTable = async (event,context, callback)=>{
 
   const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08",region: "eu-central-1"});
