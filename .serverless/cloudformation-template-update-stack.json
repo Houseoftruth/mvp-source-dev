@@ -240,7 +240,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/prod/1581036742800-2020-02-07T00:52:22.800Z/lamb.zip"
+          "S3Key": "serverless/lamb/prod/1581038161170-2020-02-07T01:16:01.170Z/lamb.zip"
         },
         "FunctionName": "lamb-prod-hello",
         "Handler": "s_hello.handler",
@@ -259,14 +259,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersiondgizu0lcNxOKrmA1mTTsea0i5JXjrzIlpSgscFl7Pqk": {
+    "HelloLambdaVersionrLHoB91j7bCCaMOeZWWb0g7RjpbAHBhpjpUw6McjKtQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "PqQy1SP8mlxHzaq4bpiRbaKnaNX04KILEqxEJPOjtEU="
+        "CodeSha256": "WOwOgNe4vUGXHceMMbhIzV6yyKVq5xSjL6zj0xwj18E="
       }
     },
     "AddmessagetologadminLambdaFunction": {
@@ -276,7 +276,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/prod/1581036742800-2020-02-07T00:52:22.800Z/lamb.zip"
+          "S3Key": "serverless/lamb/prod/1581038161170-2020-02-07T01:16:01.170Z/lamb.zip"
         },
         "FunctionName": "lamb-prod-addmessagetologadmin",
         "Handler": "s_addmessagetologadmin.handler",
@@ -295,14 +295,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "AddmessagetologadminLambdaVersionIOtAhb233AFeUfM6hFwqHjfxoer34EmRuipjcHRFPU": {
+    "AddmessagetologadminLambdaVersionXPViaRGmPDJsWRuTJQYsRNZ2rQzmg0YgUgn6JQG4IOo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AddmessagetologadminLambdaFunction"
         },
-        "CodeSha256": "PqQy1SP8mlxHzaq4bpiRbaKnaNX04KILEqxEJPOjtEU="
+        "CodeSha256": "WOwOgNe4vUGXHceMMbhIzV6yyKVq5xSjL6zj0xwj18E="
       }
     },
     "AddmessagetologkitchenLambdaFunction": {
@@ -312,7 +312,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/prod/1581036742800-2020-02-07T00:52:22.800Z/lamb.zip"
+          "S3Key": "serverless/lamb/prod/1581038161170-2020-02-07T01:16:01.170Z/lamb.zip"
         },
         "FunctionName": "lamb-prod-addmessagetologkitchen",
         "Handler": "s_addmessagetologkitchen.handler",
@@ -331,14 +331,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "AddmessagetologkitchenLambdaVersionbbXSiD9UE07WGOcwMT7UXJEd71QfRKwygyAjuhSw": {
+    "AddmessagetologkitchenLambdaVersionxzRDwUbtAISW9P6ahRgN9PJKS2LUgl5863syNlho": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AddmessagetologkitchenLambdaFunction"
         },
-        "CodeSha256": "PqQy1SP8mlxHzaq4bpiRbaKnaNX04KILEqxEJPOjtEU="
+        "CodeSha256": "WOwOgNe4vUGXHceMMbhIzV6yyKVq5xSjL6zj0xwj18E="
       }
     },
     "AddmessagetologcustomerLambdaFunction": {
@@ -348,7 +348,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/prod/1581036742800-2020-02-07T00:52:22.800Z/lamb.zip"
+          "S3Key": "serverless/lamb/prod/1581038161170-2020-02-07T01:16:01.170Z/lamb.zip"
         },
         "FunctionName": "lamb-prod-addmessagetologcustomer",
         "Handler": "s_addmessagetologcustomer.handler",
@@ -367,14 +367,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "AddmessagetologcustomerLambdaVersionBN8cXvJq1Yc9JEwSBUbEOv508RfYgzlOSY7PwY7FcI8": {
+    "AddmessagetologcustomerLambdaVersionVJ7dPnfaiuendg8x2NWRqZRggpJ4eVtiNnzyMmA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AddmessagetologcustomerLambdaFunction"
         },
-        "CodeSha256": "PqQy1SP8mlxHzaq4bpiRbaKnaNX04KILEqxEJPOjtEU="
+        "CodeSha256": "WOwOgNe4vUGXHceMMbhIzV6yyKVq5xSjL6zj0xwj18E="
       }
     },
     "CreatetableLambdaFunction": {
@@ -384,7 +384,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/lamb/prod/1581036742800-2020-02-07T00:52:22.800Z/lamb.zip"
+          "S3Key": "serverless/lamb/prod/1581038161170-2020-02-07T01:16:01.170Z/lamb.zip"
         },
         "FunctionName": "lamb-prod-createtable",
         "Handler": "s_createtable.handler",
@@ -403,14 +403,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "CreatetableLambdaVersionzmcan2pcRJhb5upsfROoYrOMzJsI9an1Lq5OsrdQ": {
+    "CreatetableLambdaVersion3ErX87SkFgXP8DcJTrydAdfSTqfMMPs9ls5qipJuRVw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreatetableLambdaFunction"
         },
-        "CodeSha256": "PqQy1SP8mlxHzaq4bpiRbaKnaNX04KILEqxEJPOjtEU="
+        "CodeSha256": "WOwOgNe4vUGXHceMMbhIzV6yyKVq5xSjL6zj0xwj18E="
       }
     },
     "CloudWatchLogsSubscriptionFilterHelloLogGroup": {
@@ -481,31 +481,31 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersiondgizu0lcNxOKrmA1mTTsea0i5JXjrzIlpSgscFl7Pqk"
+        "Ref": "HelloLambdaVersionrLHoB91j7bCCaMOeZWWb0g7RjpbAHBhpjpUw6McjKtQ"
       }
     },
     "AddmessagetologadminLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AddmessagetologadminLambdaVersionIOtAhb233AFeUfM6hFwqHjfxoer34EmRuipjcHRFPU"
+        "Ref": "AddmessagetologadminLambdaVersionXPViaRGmPDJsWRuTJQYsRNZ2rQzmg0YgUgn6JQG4IOo"
       }
     },
     "AddmessagetologkitchenLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AddmessagetologkitchenLambdaVersionbbXSiD9UE07WGOcwMT7UXJEd71QfRKwygyAjuhSw"
+        "Ref": "AddmessagetologkitchenLambdaVersionxzRDwUbtAISW9P6ahRgN9PJKS2LUgl5863syNlho"
       }
     },
     "AddmessagetologcustomerLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AddmessagetologcustomerLambdaVersionBN8cXvJq1Yc9JEwSBUbEOv508RfYgzlOSY7PwY7FcI8"
+        "Ref": "AddmessagetologcustomerLambdaVersionVJ7dPnfaiuendg8x2NWRqZRggpJ4eVtiNnzyMmA"
       }
     },
     "CreatetableLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreatetableLambdaVersionzmcan2pcRJhb5upsfROoYrOMzJsI9an1Lq5OsrdQ"
+        "Ref": "CreatetableLambdaVersion3ErX87SkFgXP8DcJTrydAdfSTqfMMPs9ls5qipJuRVw"
       }
     }
   }
