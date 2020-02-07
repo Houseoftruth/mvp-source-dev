@@ -1,5 +1,5 @@
 'use strict';
-const AWS =  require('aws-sdk')
+const AWS = require('aws-sdk')
 var Pusher = require('pusher');
 
 var pusher = new Pusher({
@@ -11,12 +11,12 @@ var pusher = new Pusher({
 });
 
 
-AWS.config.update({ region: "eu-central-1"});
+AWS.config.update({ region: "eu-central-1" });
 
 
-exports.hello = async (event, context, callback)=> {
+exports.hello = async (event, context, callback) => {
 
-  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
 
   const params = {
     TableName: "mvp-chatlog",
@@ -25,7 +25,7 @@ exports.hello = async (event, context, callback)=> {
       message: "Bob"
     }
   }
-  
+
   try {
     const data = await documentClient.put(params).promise();
 
@@ -33,16 +33,16 @@ exports.hello = async (event, context, callback)=> {
   } catch (err) {
     console.log(err);
   }
-  
-console.log("BEFORE DOCLIENT")
+
+  console.log("BEFORE DOCLIENT")
 
 
 };
 
 
-exports.addMessageToLogAdmin = async (event, context, callback)=> {
+exports.addMessageToLogAdmin = async (event, context, callback) => {
 
-  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
 
   const params = {
     TableName: "mvp-chatlog",
@@ -51,7 +51,7 @@ exports.addMessageToLogAdmin = async (event, context, callback)=> {
       message: "Richard isn't going to be in today, just to let you know..."
     }
   }
-  
+
   try {
     const data = await documentClient.put(params).promise();
 
@@ -59,14 +59,14 @@ exports.addMessageToLogAdmin = async (event, context, callback)=> {
   } catch (err) {
     console.log(err);
   }
-  
-console.log("BEFORE DOCLIENT")
+
+  console.log("BEFORE DOCLIENT")
 
 
 };
-exports.addMessageToLogKitchen = async (event, context, callback)=> {
+exports.addMessageToLogKitchen = async (event, context, callback) => {
 
-  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
 
   const params = {
     TableName: "mvp-chatlog",
@@ -75,7 +75,7 @@ exports.addMessageToLogKitchen = async (event, context, callback)=> {
       message: "Coming right up! :)"
     }
   }
-  
+
   try {
     const data = await documentClient.put(params).promise();
 
@@ -83,14 +83,14 @@ exports.addMessageToLogKitchen = async (event, context, callback)=> {
   } catch (err) {
     console.log(err);
   }
-  
-console.log("BEFORE DOCLIENT")
+
+  console.log("BEFORE DOCLIENT")
 
 
 };
-exports.addMessageToLogCustomer = async (event, context, callback)=> {
+exports.addMessageToLogCustomer = async (event, context, callback) => {
 
-  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1"});
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
 
   const params = {
     TableName: "mvp-chatlog",
@@ -99,7 +99,7 @@ exports.addMessageToLogCustomer = async (event, context, callback)=> {
       message: "Excuse me, but may i have some more butter, please?"
     }
   }
-  
+
   try {
     const data = await documentClient.put(params).promise();
 
@@ -107,16 +107,42 @@ exports.addMessageToLogCustomer = async (event, context, callback)=> {
   } catch (err) {
     console.log(err);
   }
-  
-console.log("BEFORE DOCLIENT")
+
+  console.log("BEFORE DOCLIENT")
+
+
+};
+exports.createClient = async (event, context, callback) => {
+
+  const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });
+
+  const params = {
+    TableName: "mvp-users",
+    Item: {
+      date: Date.now(),
+      contact: "Richard Dawkins",
+      restaurantname: "Brilliant Burritos",
+      notables: 15
+      
+    }
+  }
+
+  try {
+    const data = await documentClient.put(params).promise();
+
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+
+  console.log("BEFORE DOCLIENT")
 
 
 };
 
+exports.creatTable = async (event, context, callback) => {
 
-exports.creatTable = async (event,context, callback)=>{
-
-  const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08",region: "eu-central-1"});
+  const ddb = new AWS.DynamoDB({ apiVersion: "2012-10-08", region: "eu-central-1" });
   pusher.trigger('my-channel', 'my-event', {
     "message": "hello world"
   });
@@ -152,7 +178,7 @@ exports.creatTable = async (event,context, callback)=>{
   };
 
   try {
-    const dota  = await ddb.createTable(tableParams).promise()
+    const dota = await ddb.createTable(tableParams).promise()
     console.log(dota);
   } catch (err) {
     console.log(err);
