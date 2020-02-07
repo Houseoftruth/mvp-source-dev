@@ -112,6 +112,7 @@ exports.addMessageToLogCustomer = async (event, context, callback) => {
 
 
 };
+
 exports.createClient = async (event, context, callback) => {
 
   const documentClient = new AWS.DynamoDB.DocumentClient({ region: "eu-central-1" });

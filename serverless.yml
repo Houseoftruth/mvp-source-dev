@@ -68,6 +68,7 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
+
   hello:
     handler: handler.hello
   addmessagetologadmin:
@@ -79,7 +80,7 @@ functions:
   createtable:
     handler: handler.createTable
   createuser:
-    handler: handler.createUser
+    handler: handler.createClient
 
 events:
 
@@ -99,7 +100,7 @@ events:
       path: createtable
       method: get
   - http:
-      path: createuser
+      path: createclient
       method: get
 
 #    The following are a few example events you can configure
