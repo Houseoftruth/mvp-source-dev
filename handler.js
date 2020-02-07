@@ -145,8 +145,8 @@ exports.saveFileToS3 = async (event, context, callback) => {
   var s3 = new AWS.S3();
 
       var bucketName = 'mvp-qrcodes'
-      var keyName = getKeyName(folder, filename);
-      var content = 'This is a sample text file';
+      var keyName = getKeyName('./', "Qr#1");
+      var content = 'I Am Not Qr';
   
       var params = { Bucket: bucketName, Key: keyName, Body: content };
   
