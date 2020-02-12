@@ -6,9 +6,7 @@ phases:
     commands:
       - npm install
       - npm install -g @angular/cli
-      - npm install serverless --global
-      - npm install -g serverless-apigw-binary
-
+   
 
     
   build:
@@ -17,10 +15,6 @@ phases:
   post_build:
     commands:
       - echo $AWS_ACCESS_ID
-      - serverless deploy --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY}
-      - printf '{"ImageURI":"image_URI"}' > imageDetail.json
-      - aws s3api list-buckets --query "Buckets[].Name"
-      - aws s3 sync ./dist/mvp-frontend s3://mvp-source-dev --acl 'public-read-write' --delete
 
 artifacts:
   files:

@@ -280,7 +280,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-hello",
               "Handler": "s_hello.handler",
@@ -299,14 +299,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionpCMmpEUnhJUDMc3eugn5eW1p9sdOUj4Z7ubhslnS0": {
+          "HelloLambdaVersion9vI716xQSrhNhCaiLbCYxElS8T6XDBesdKoWHrOQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "AddmessagetologadminLambdaFunction": {
@@ -316,7 +316,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-addmessagetologadmin",
               "Handler": "s_addmessagetologadmin.handler",
@@ -335,14 +335,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AddmessagetologadminLambdaVersionf7rZpqiBixJtDQtk2ImkGZHg4bl1pb4EjcOer3S2so": {
+          "AddmessagetologadminLambdaVersioncLs9t22IVpSsFTzkC3i6tckUHAh6I92f4H695QXeU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddmessagetologadminLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "AddmessagetologkitchenLambdaFunction": {
@@ -352,7 +352,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-addmessagetologkitchen",
               "Handler": "s_addmessagetologkitchen.handler",
@@ -371,14 +371,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AddmessagetologkitchenLambdaVersionea14pRjCnLKEA2YW5La5gFciZ0CJCZkx4rvTIPhM": {
+          "AddmessagetologkitchenLambdaVersionnS0mlo1nDIpTisgj8mtbx2fBpHZ8N7x6AXcVvcc0M": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddmessagetologkitchenLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "AddmessagetologcustomerLambdaFunction": {
@@ -388,7 +388,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-addmessagetologcustomer",
               "Handler": "s_addmessagetologcustomer.handler",
@@ -407,14 +407,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AddmessagetologcustomerLambdaVersiontzcU0HcTooBmXlOAMJvRpZVFZFKpSvhNHvtZ4coaKk": {
+          "AddmessagetologcustomerLambdaVersion70ra7CWhaLl0tiFFWQx4PPvpGEuqdAAYizK8KJpf7E": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddmessagetologcustomerLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "CreatetableLambdaFunction": {
@@ -424,7 +424,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-createtable",
               "Handler": "s_createtable.handler",
@@ -443,14 +443,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreatetableLambdaVersionRqe2LUDo9C97ZG57rDCTfu2T68Dy1bEtDZOWYZAc": {
+          "CreatetableLambdaVersionrzLMJgmaGxgdDl3rhPU1LhW1kDVuFgvQ5PvaY7rV4w": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreatetableLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "CreateuserLambdaFunction": {
@@ -460,7 +460,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-createuser",
               "Handler": "s_createuser.handler",
@@ -479,14 +479,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "CreateuserLambdaVersion5y4FOQGKHexnKbWrYMj9qo028ZtRmmGbALnYpNTMUYk": {
+          "CreateuserLambdaVersionJhqUoimA6J0kxvWeresMniF8t4BeTWdIeN9vmoo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateuserLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "StoreqrLambdaFunction": {
@@ -496,7 +496,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z/lamb.zip"
+                "S3Key": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z/lamb.zip"
               },
               "FunctionName": "lamb-prod-storeqr",
               "Handler": "s_storeqr.handler",
@@ -515,14 +515,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "StoreqrLambdaVersionwx3o1jRjEV4tGtbt2hZZW3xHss3Xqg1uZalWSkFf7s": {
+          "StoreqrLambdaVersionJClSzfWsXaa9hDMaedCAr26goAK8Tm0e0sFWICim14": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "StoreqrLambdaFunction"
               },
-              "CodeSha256": "h2Uy6/Zdzlzbo4kIwYuk6T7KSHC2crhdIKHfTozBQPE="
+              "CodeSha256": "V97kbketgHEcJdfAurP4Sijb9g92MmgR8fHbBU61kBk="
             }
           },
           "CloudWatchLogsSubscriptionFilterHelloLogGroup": {
@@ -613,43 +613,43 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionpCMmpEUnhJUDMc3eugn5eW1p9sdOUj4Z7ubhslnS0"
+              "Ref": "HelloLambdaVersion9vI716xQSrhNhCaiLbCYxElS8T6XDBesdKoWHrOQ"
             }
           },
           "AddmessagetologadminLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddmessagetologadminLambdaVersionf7rZpqiBixJtDQtk2ImkGZHg4bl1pb4EjcOer3S2so"
+              "Ref": "AddmessagetologadminLambdaVersioncLs9t22IVpSsFTzkC3i6tckUHAh6I92f4H695QXeU"
             }
           },
           "AddmessagetologkitchenLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddmessagetologkitchenLambdaVersionea14pRjCnLKEA2YW5La5gFciZ0CJCZkx4rvTIPhM"
+              "Ref": "AddmessagetologkitchenLambdaVersionnS0mlo1nDIpTisgj8mtbx2fBpHZ8N7x6AXcVvcc0M"
             }
           },
           "AddmessagetologcustomerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddmessagetologcustomerLambdaVersiontzcU0HcTooBmXlOAMJvRpZVFZFKpSvhNHvtZ4coaKk"
+              "Ref": "AddmessagetologcustomerLambdaVersion70ra7CWhaLl0tiFFWQx4PPvpGEuqdAAYizK8KJpf7E"
             }
           },
           "CreatetableLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreatetableLambdaVersionRqe2LUDo9C97ZG57rDCTfu2T68Dy1bEtDZOWYZAc"
+              "Ref": "CreatetableLambdaVersionrzLMJgmaGxgdDl3rhPU1LhW1kDVuFgvQ5PvaY7rV4w"
             }
           },
           "CreateuserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateuserLambdaVersion5y4FOQGKHexnKbWrYMj9qo028ZtRmmGbALnYpNTMUYk"
+              "Ref": "CreateuserLambdaVersionJhqUoimA6J0kxvWeresMniF8t4BeTWdIeN9vmoo"
             }
           },
           "StoreqrLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "StoreqrLambdaVersionwx3o1jRjEV4tGtbt2hZZW3xHss3Xqg1uZalWSkFf7s"
+              "Ref": "StoreqrLambdaVersionJClSzfWsXaa9hDMaedCAr26goAK8Tm0e0sFWICim14"
             }
           }
         }
@@ -746,7 +746,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "HelloLambdaVersionpCMmpEUnhJUDMc3eugn5eW1p9sdOUj4Z7ubhslnS0"
+        "versionLogicalId": "HelloLambdaVersion9vI716xQSrhNhCaiLbCYxElS8T6XDBesdKoWHrOQ"
       },
       "addmessagetologadmin": {
         "handler": "s_addmessagetologadmin.handler",
@@ -757,7 +757,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AddmessagetologadminLambdaVersionf7rZpqiBixJtDQtk2ImkGZHg4bl1pb4EjcOer3S2so"
+        "versionLogicalId": "AddmessagetologadminLambdaVersioncLs9t22IVpSsFTzkC3i6tckUHAh6I92f4H695QXeU"
       },
       "addmessagetologkitchen": {
         "handler": "s_addmessagetologkitchen.handler",
@@ -768,7 +768,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AddmessagetologkitchenLambdaVersionea14pRjCnLKEA2YW5La5gFciZ0CJCZkx4rvTIPhM"
+        "versionLogicalId": "AddmessagetologkitchenLambdaVersionnS0mlo1nDIpTisgj8mtbx2fBpHZ8N7x6AXcVvcc0M"
       },
       "addmessagetologcustomer": {
         "handler": "s_addmessagetologcustomer.handler",
@@ -779,7 +779,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AddmessagetologcustomerLambdaVersiontzcU0HcTooBmXlOAMJvRpZVFZFKpSvhNHvtZ4coaKk"
+        "versionLogicalId": "AddmessagetologcustomerLambdaVersion70ra7CWhaLl0tiFFWQx4PPvpGEuqdAAYizK8KJpf7E"
       },
       "createtable": {
         "handler": "s_createtable.handler",
@@ -790,7 +790,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "CreatetableLambdaVersionRqe2LUDo9C97ZG57rDCTfu2T68Dy1bEtDZOWYZAc"
+        "versionLogicalId": "CreatetableLambdaVersionrzLMJgmaGxgdDl3rhPU1LhW1kDVuFgvQ5PvaY7rV4w"
       },
       "createuser": {
         "handler": "s_createuser.handler",
@@ -801,7 +801,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "CreateuserLambdaVersion5y4FOQGKHexnKbWrYMj9qo028ZtRmmGbALnYpNTMUYk"
+        "versionLogicalId": "CreateuserLambdaVersionJhqUoimA6J0kxvWeresMniF8t4BeTWdIeN9vmoo"
       },
       "storeqr": {
         "handler": "s_storeqr.handler",
@@ -812,7 +812,7 @@
         "timeout": 10,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "StoreqrLambdaVersionwx3o1jRjEV4tGtbt2hZZW3xHss3Xqg1uZalWSkFf7s"
+        "versionLogicalId": "StoreqrLambdaVersionJClSzfWsXaa9hDMaedCAr26goAK8Tm0e0sFWICim14"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -826,7 +826,7 @@
     "artifact": "C:\\Users\\Jonny Deep\\SAKO\\MVP\\MVP-SRC\\lamb\\.serverless\\lamb.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/lamb/prod/1581056108971-2020-02-07T06:15:08.971Z",
+    "artifactDirectoryName": "serverless/lamb/prod/1581489391597-2020-02-12T06:36:31.597Z",
     "artifact": "lamb.zip"
   }
 }

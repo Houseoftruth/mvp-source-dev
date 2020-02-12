@@ -79,12 +79,36 @@ exports.addMessageToLogKitchen = async (event, context, callback) => {
     const data = await documentClient.put(params).promise();
 
     console.log(data);
+    
+  
   } catch (err) {
     console.log(err);
+    
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message: 'It Works Fucker?',
+        input: event,
+      },
+      null,
+      2
+    ),
+  };
   }
 
   console.log("BEFORE DOCLIENT")
-
+  return {
+    statusCode: 200,
+    body: JSON.stringify(
+      {
+        message: 'It Works Fucker! :)',
+        input: event,
+      },
+      null,
+      2
+    ),
+  };
 
 };
 
