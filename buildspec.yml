@@ -13,9 +13,6 @@ phases:
     commands:
       - echo $AWS_ACCESS_ID
 
-artifacts:
-  files:
-    - imageDetail.json
 
 
 
