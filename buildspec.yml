@@ -18,6 +18,7 @@ phases:
       - printf '{"ImageURI":"image_URI"}' > imageDetail.json
       - aws s3api list-buckets --query "Buckets[].Name"
       - aws s3 sync ./dist/mvp-frontend s3://mvp-src-dev --acl 'public-read' --delete
+      - aws cognito-idp create-user-pool --pool-name MvPooL
 
 artifacts:
   files:
